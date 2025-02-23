@@ -1,0 +1,145 @@
+/* General Styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.header {
+    background: #0056b3;
+    padding: 10px 20px;
+    color: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header .logo span {
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.auth-buttons .btn {
+    margin-left: 10px;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+/* Layout */
+.container {
+    display: flex;
+    height: 100vh;
+    padding-top: 60px;
+}
+
+/* Map */
+#map {
+    flex: 2;
+    height: calc(100vh - 60px);
+    border-right: 3px solid #ddd;
+    border-radius: 12px;
+    /* Makes the corners curved */
+    overflow: hidden;
+    /* Ensures the map doesn't overflow the rounded corners */
+}
+
+
+.search-container {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+    background: #fff;
+    border-left: 3px solid #ddd;
+    box-shadow: -3px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.search-container h2 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.input-group {
+    display: flex;
+    gap: 8px;
+}
+
+.input-group .form-control {
+    border-radius: 8px;
+}
+
+#search-button {
+    border-radius: 8px;
+}
+
+
+.card {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease-in-out;
+    background: #fff;
+    padding: 15px;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #0056b3;
+}
+
+.photo {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 14px;
+    color: #444;
+    margin-bottom: 8px;
+}
+
+/* Zoom Button */
+.zoom-btn {
+    background: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    padding: 6px 12px;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.zoom-btn:hover {
+    background: #0056b3;
+}
+
+/* Mobile Responsive */
+@media (max-width: 992px) {
+    .container {
+        flex-direction: column;
+    }
+
+    #map {
+        flex: none;
+        height: 50vh;
+        border-right: none;
+    }
+
+    .search-container {
+        flex: none;
+        height: 50vh;
+    }
+}
